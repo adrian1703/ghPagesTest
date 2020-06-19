@@ -8,7 +8,6 @@ before_install:
 script:
   - mkdir files-to-gh-pages
   - echo $(pwd)
-  - helm package helm/foo -prod -d files-to-gh-pages
   - helm package helm/foo -d files-to-gh-pages
   - cp README.md files-to-gh-pages
   - cd files-to-gh-pages
