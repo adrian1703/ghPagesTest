@@ -3,11 +3,11 @@ entries:
   foo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-06-25T07:27:25.533636147Z"
+    created: "2020-06-25T07:28:07.866026405Z"
     description: A Helm chart for Kubernetes
-    digest: 50871df3689814278dae86d67de28830a841d4182bdc4a3795379be9481c29d8
+    digest: ae0496feb7320f4b32b952abb466cd0f4a7cb2cc6d4f5f4d3f64a1c1b2e7f57c
     name: foo
     urls:
     - foo-0.1.5.tgz
     version: 0.1.5
-generated: "2020-06-25T07:27:25.532813779Z"
+generated: "2020-06-25T07:28:07.865628926Z"
