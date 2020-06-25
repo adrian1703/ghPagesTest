@@ -12,19 +12,6 @@ jobs:
         with:
           java-version: 1.8
       - run: mvn -B package --file controller/pom.xml
-      - run: mkdir staging && cp controller/target/*jar-with-dependencies.jar staging
-      - uses: actions/upload-artifact@v1
-        with:
-          name: Package
-          path: staging
-        
-  push_to_registry:
-    needs: build
-    name: Push Docker image to GitHub Packages
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the repo
-        uses: actions/checkout@v2
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
         with:
@@ -34,3 +21,4 @@ jobs:
           repository: my-org/my-repo/my-image
           tag_with_ref: true
           dockerfile: controller/Dockerfile 
+        
