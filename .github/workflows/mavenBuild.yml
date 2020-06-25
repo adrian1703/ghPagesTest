@@ -13,7 +13,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Maven
-        run: mvn -B package --file controller/pom.xml
+        run: mvn package --file controller/pom.xml
         
   push_to_registry:
     needs: build
