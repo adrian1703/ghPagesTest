@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  fo-s:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-08-28T12:04:03.629450458Z"
+    description: A Helm chart for Kubernetes
+    digest: cb8a83dcb9684c4ff6849063b0be2d1a24efef6aae3b22bc7349d13dc244847c
+    name: fo-s
+    urls:
+    - https://github.com/adrian1703/ghPagesTest/releases/download/fo-s-0.1.5/fo-s-0.1.5.tgz
+    version: 0.1.5
   fos:
   - apiVersion: v1
     appVersion: "1.0"
