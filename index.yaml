@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  fos:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-08-28T12:00:37.5400594Z"
+    description: A Helm chart for Kubernetes
+    digest: c5118684439afa572c303354f2de279d8d6fa19832bbd162a35064f473441232
+    name: fos
+    urls:
+    - https://github.com/adrian1703/ghPagesTest/releases/download/fos-0.1.5/fos-0.1.5.tgz
+    version: 0.1.5
+generated: "2020-08-28T12:00:37.367276211Z"
