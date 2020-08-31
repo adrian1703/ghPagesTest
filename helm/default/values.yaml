@@ -1,17 +1,19 @@
-# Default values for foo.
+# Default values for java-controller.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: java-k8s-operator
+  tag: 0.0.1-SNAPSHOT
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
+
+
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -19,6 +21,7 @@ serviceAccount:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name:
+
 
 podSecurityContext: {}
   # fsGroup: 2000
@@ -34,20 +37,6 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
-
-ingress:
-  enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-  hosts:
-    - host: chart-example.local
-      paths: []
-
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -66,3 +55,49 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# Configmap configuration
+
+# pod-name of elasticsearch master
+ELASTICSEARCH_MASTER_HOSTNAME: 'elasticsearch-master'
+# port to use for api calls to elasticsearch master
+ELASTICSEARCH_MASTER_PORT: '9200'
+# should an ilm policy be overridden if one
+# with an identical name already exists? 'true' | 'false'
+ILM_POLICY_FORCE_UPDATE: 'false'
+# 'true'|'false'
+# determines whether or not jobs execute
+DRY_RUN: 'false'
+# time to sleep on job failure | in ms
+SLEEP_TIMER: '3000'
+
+FILEBEAT_VERSION: 7.5.0
+
+METRICBEAT_VERSION: 7.6.1
+
+NAMESPACE_EXEMPTIONS:
+    - "default"
+    - "docker"
+    - "kube-node-lease"
+    - "kube-public"
+    - "kube-system"
+
+INDEX:
+  SETTINGS:
+    NUMBER_OF_SHARDS: 1
+    NUMBER_OF_REPLICAS: 1
+    
+ILM_POLICY:
+  LOGS:
+    ROLLOVER:
+      MAX_SIZE: '50mb'
+      MAX_AGE: '30d'
+    DELETE:
+      MIN_AGE: '90d'
+  METRICS:
+    ROLLOVER:
+      MAX_SIZE: '50mb'
+      MAX_AGE: '30d'
+    DELETE:
+      MIN_AGE: '90d'
+      
