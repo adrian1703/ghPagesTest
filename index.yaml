@@ -20,4 +20,14 @@ entries:
     urls:
     - https://github.com/adrian1703/ghPagesTest/releases/download/fos-0.1.5/fos-0.1.5.tgz
     version: 0.1.5
+  java-k8s-operator:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-08-31T10:10:18.18564434Z"
+    description: A Helm chart for Kubernetes
+    digest: f2866f6c1aa8083ad1866c426157f5fdee1e2de0a3aed9de2b7547bcd4c4c1e4
+    name: java-k8s-operator
+    urls:
+    - https://github.com/adrian1703/ghPagesTest/releases/download/java-k8s-operator-0.0.1-SNAPSHOT/java-k8s-operator-0.0.1-SNAPSHOT.tgz
+    version: 0.0.1-SNAPSHOT
 generated: "2020-08-28T12:00:37.367276211Z"
