@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  eka:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-08-31T10:20:26.975228114Z"
+    description: A Helm chart for Kubernetes
+    digest: 69fd7dc279e0b4f4f6b5679ba404769d5ba3e68cbc80465661aa96dc85c47877
+    name: eka
+    urls:
+    - https://github.com/adrian1703/ghPagesTest/releases/download/eka-0.0.1-SNAPSHOT/eka-0.0.1-SNAPSHOT.tgz
+    version: 0.0.1-SNAPSHOT
   fo-s:
   - apiVersion: v1
     appVersion: "1.0"
